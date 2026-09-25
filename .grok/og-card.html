@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tyra's Hair Biz Boutique</title>
+  <style>
+    @font-face {
+      font-family: "Great Vibes";
+      src: url("og-fonts/GreatVibes.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cinzel";
+      src: url("og-fonts/Cinzel-400.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cinzel";
+      src: url("og-fonts/Cinzel-600.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("og-fonts/Cormorant-500.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("og-fonts/Cormorant-500i.ttf") format("truetype");
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #F6EBE4;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background:
+        radial-gradient(ellipse at 50% 42%, #FBF4EE 0%, #F6EBE4 46%, #E9D5C8 100%);
+      color: #1A1310;
+    }
+
+    .silk {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, rgba(176, 141, 87, 0.07) 0%, transparent 34%, rgba(201, 160, 138, 0.08) 62%, transparent 100%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 7px);
+      pointer-events: none;
+    }
+
+    .frame {
+      position: absolute;
+      border: 1px solid rgba(176, 141, 87, 0.72);
+      pointer-events: none;
+    }
+    .frame.outer { inset: 28px; }
+    .frame.inner { inset: 36px; border-color: rgba(176, 141, 87, 0.38); }
+
+    .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid #B08D57;
+      pointer-events: none;
+    }
+    .corner.tl { top: 28px; left: 28px; border-right: 0; border-bottom: 0; }
+    .corner.tr { top: 28px; right: 28px; border-left: 0; border-bottom: 0; }
+    .corner.bl { bottom: 28px; left: 28px; border-right: 0; border-top: 0; }
+    .corner.br { bottom: 28px; right: 28px; border-left: 0; border-top: 0; }
+
+    .flourish {
+      position: absolute;
+      top: 50%;
+      width: 168px;
+      height: 280px;
+      transform: translateY(-50%);
+      opacity: 0.82;
+      pointer-events: none;
+    }
+    .flourish.left { left: 78px; }
+    .flourish.right { right: 78px; transform: translateY(-50%) scaleX(-1); }
+
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      width: 720px;
+      text-align: center;
+    }
+
+    .monogram {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 18px;
+      border: 1.25px solid #B08D57;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #B08D57;
+      font-family: "Cinzel", "Times New Roman", serif;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .wordmark {
+      font-family: "Great Vibes", "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-size: 132px;
+      line-height: 0.86;
+      color: #B08D57;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 0 rgba(255, 248, 240, 0.7);
+      margin: 0;
+    }
+
+    .name {
+      margin: 10px 0 0;
+      font-family: "Cinzel", "Times New Roman", serif;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 0.42em;
+      color: #1A1310;
+      padding-left: 0.42em;
+    }
+
+    .rule {
+      width: 168px;
+      height: 1px;
+      margin: 22px auto 16px;
+      background: linear-gradient(90deg, transparent, #B08D57 18%, #B08D57 82%, transparent);
+      position: relative;
+    }
+    .rule::before,
+    .rule::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 5px;
+      height: 5px;
+      border: 1px solid #B08D57;
+      transform: translateY(-50%) rotate(45deg);
+      background: #F6EBE4;
+    }
+    .rule::before { left: 18px; }
+    .rule::after { right: 18px; }
+
+    .tag {
+      font-family: "Cinzel", "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.62em;
+      color: #C9A08A;
+      padding-left: 0.62em;
+    }
+
+    .side {
+      position: absolute;
+      top: 50%;
+      font-family: "Cinzel", serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.48em;
+      color: rgba(176, 141, 87, 0.78);
+      white-space: nowrap;
+    }
+    .side.left {
+      left: 52px;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: center;
+    }
+    .side.right {
+      right: 52px;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="silk"></div>
+    <div class="frame outer"></div>
+    <div class="frame inner"></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <svg class="flourish left" viewBox="0 0 168 280" fill="none" aria-hidden="true">
+      <path d="M84 18 C118 52, 138 88, 118 128 C96 172, 42 168, 52 128 C64 86, 128 96, 132 148 C136 204, 72 232, 84 262"
+        stroke="#B08D57" stroke-width="1.15" />
+      <path d="M84 40 C70 78, 78 110, 98 132" stroke="#C9A08A" stroke-width="0.8" />
+      <path d="M96 70 C124 92, 128 124, 108 150" stroke="#B08D57" stroke-width="0.7" opacity="0.7" />
+      <circle cx="84" cy="18" r="2.2" fill="#B08D57" />
+      <circle cx="84" cy="262" r="2.2" fill="#B08D57" />
+      <path d="M78 140 l6 -6 l6 6 l-6 6 z" fill="#B08D57" opacity="0.85" />
+    </svg>
+    <svg class="flourish right" viewBox="0 0 168 280" fill="none" aria-hidden="true">
+      <path d="M84 18 C118 52, 138 88, 118 128 C96 172, 42 168, 52 128 C64 86, 128 96, 132 148 C136 204, 72 232, 84 262"
+        stroke="#B08D57" stroke-width="1.15" />
+      <path d="M84 40 C70 78, 78 110, 98 132" stroke="#C9A08A" stroke-width="0.8" />
+      <path d="M96 70 C124 92, 128 124, 108 150" stroke="#B08D57" stroke-width="0.7" opacity="0.7" />
+      <circle cx="84" cy="18" r="2.2" fill="#B08D57" />
+      <circle cx="84" cy="262" r="2.2" fill="#B08D57" />
+      <path d="M78 140 l6 -6 l6 6 l-6 6 z" fill="#B08D57" opacity="0.85" />
+    </svg>
+
+    <div class="side left">BLACK OWNED</div>
+    <div class="side right">LUXURY HAIR</div>
+
+    <div class="lockup">
+      <div class="monogram">T</div>
+      <h1 class="wordmark">Tyra's</h1>
+      <div class="name">HAIR BIZ BOUTIQUE</div>
+      <div class="rule"></div>
+      <div class="tag">STYLE UNLEASHED</div>
+    </div>
+  </div>
+</body>
+</html>

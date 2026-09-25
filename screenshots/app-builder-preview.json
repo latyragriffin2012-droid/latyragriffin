@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Tyra's Hair Biz Boutique",
+      "hasCanvas": false,
+      "bodyTextLen": 2063,
+      "bodyTextHash": "6068b41a95384a21b0e98e99de61b20d8e5a44f433198cc503696256840fad5a",
+      "bodyTextPrefix": "Tyra'sHair Biz Boutique ShopLookbookServicesAboutBook Style Unle",
+      "horizontalOverflow": true,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Tyra's Hair Biz Boutique",
+      "hasCanvas": false,
+      "bodyTextLen": 2063,
+      "bodyTextHash": "6068b41a95384a21b0e98e99de61b20d8e5a44f433198cc503696256840fad5a",
+      "bodyTextPrefix": "Tyra'sHair Biz Boutique ShopLookbookServicesAboutBook Style Unle",
+      "horizontalOverflow": true,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
